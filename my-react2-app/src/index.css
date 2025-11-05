@@ -1,0 +1,89 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+.calculator-container{
+  background-color: black;
+  max-width: 700px;
+  margin: auto;
+  position: relative;
+}
+.arithmetic-operation-display,.display-result{
+  width: 99%;
+  height: 200px;
+  background-color: black;
+  border: none;
+  color:gray;
+  text-align: end;
+  font-size: 1.2rem;
+  word-wrap: break-word;  
+}
+.display-result{
+  height: 100px;
+  color:white;
+  font-size: 3rem;
+  padding-bottom: 0;
+}
+ 
+button{
+  padding: 20px;
+  border-radius: 10px;
+  gap:20px;
+  margin: 5px;
+  border:none;
+  font-size: 1.3rem;
+  background-color: rgba(73, 70, 70, 0.486);
+  color: white;
+}
+button:hover{
+  background-color: rgb(114, 179, 235);
+}
+button:active{
+  background-color: rgb(19, 132, 231);
+}
+.button-container{
+  display: grid;
+  grid-template-columns:repeat(4,1fr);
+
+  padding-bottom: 50px;
+}
+
+.operation-digit{
+  background-color: rgb(69, 117, 250);
+  color: white;
+}
+.top-operation{
+  background-color: gray;
+}
+
+
+.apperance-container{
+  position: relative;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  max-width: 20%;
+  margin: auto;
+  border: 0 solid gray;
+  border-radius: 50px;
+  top:20px;
+  background-color: rgb(36, 35, 35);
+}
+
+/*TO HANDLE CHANGES IN APPEARANCE */
+
+.dark-apperance,.light-apperance{
+  background-color: rgba(255, 228, 196, 0.856);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateX(20);
+}
+.light-apperance{
+  background-color:rgb(36, 35, 35);
+}
+
+
+
+   
