@@ -1,4 +1,14 @@
 footer{
-    background-color: blue;
     height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+footer div{
+    background-color:var(--button-fg);
+    height: 5px;
+    width: 134px;
+    border-radius: 100px;
 }

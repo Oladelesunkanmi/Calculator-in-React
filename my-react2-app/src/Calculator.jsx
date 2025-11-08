@@ -9,7 +9,8 @@ function Calculator() {
     const [isDark, setIsDark] = useState(false);
 
 
-    const operation = ['/', '+', '*', '-', '.'];
+    const operation = ["/", "+", "*", "-", "."];
+
 
     function handleDisplay(e) {
 
@@ -27,17 +28,23 @@ function Calculator() {
     }
 
     function percentage(e) {
-        setResult(eval((value * 1.0) / 100));
+        setResult(eval(value) / 100);
     }
 
     function calculate() {
         setValue(eval(value).toString())
     }
 
+    function handleDecimal() {
+        const lastNumber = value.split(/[\+\-\*\/]/).pop();
+        if (lastNumber.includes('.')) return;
+        setValue(value + '.');
+    }
+
 
     function clear() {
         setValue("");
-        setResult("");
+        setResult("0");
     }
 
     function deleteLast() {
@@ -79,12 +86,12 @@ function Calculator() {
                         <button onClick={() => handleDisplay("2")}>2</button>
                         <button onClick={() => handleDisplay("3")}>3</button>
                         <button className="operation-digit" onClick={() => handleDisplay("+")}>+</button>
-                        <button onClick={() => handleDisplay(".")}>.</button>
+                        <button onClick={handleDecimal}>.</button>
                         <button onClick={() => handleDisplay("0")}>0</button>
                         <button onClick={deleteLast}>⌫</button>
                         <button className="operation-digit" onClick={calculate}>=</button>
                     </div>
-<Footer/>
+                    <Footer />
                 </div>
 
             </div>
